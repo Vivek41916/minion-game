@@ -1,0 +1,18 @@
+def minion_game(string):
+    vo=['A','E','I','O','U']
+    s=0
+    k=0
+    for i in range(len(string)):
+        if string[i] not in vo:
+            s+=(len(string)-i)                
+        else:
+            k+=(len(string)-i)
+    if (k<s):
+        print('Stuart '+str(s))
+    elif(k==s):
+        print('Draw')
+    else:
+        print('Kevin '+str(k))
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
